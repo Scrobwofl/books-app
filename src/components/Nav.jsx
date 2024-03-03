@@ -1,13 +1,21 @@
-import Link from "next/link"
+import Link from "next/link";
 export default function Nav() {
-    return (
-        <div>
-            <ol className="flex flex-row p-3">
-                <li className="m-4"><Link href='/'>home</Link></li>
-                <li className="m-4"><Link href='/books'>books</Link></li>
-                <li className="m-4"><Link href='/books/add-book'> add books</Link></li>
-                <li className="m-4"><Link href='/add-genre'> add/view genres</Link></li>
-            </ol>
-        </div>
-    )
+  return (
+    <div className="bg-gray-800">
+      <ol className="flex flex-row p-3">
+        <li className="m-4 hover:text-yellow-600">
+          <Link href="/">Home</Link>
+        </li>
+        <li className="m-4 hover:text-yellow-600">
+          <Link href="/books">Library</Link>
+        </li>
+        <li className="m-4 hover:text-yellow-600">
+          <Link href="/books/add-book">Add Book</Link>
+        </li>
+        <li className="m-4 hover:text-yellow-600">
+          <Link href="/add-genre"> Add/View Genres</Link>
+        </li>
+      </ol>
+    </div>
+  );
 }
